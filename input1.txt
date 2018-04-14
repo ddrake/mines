@@ -1,0 +1,9 @@
+i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x
+'a',1,'ijvwx'
+'b',1,'ijk'
+'c',2,'jklmn'
+'d',2,'mno'
+'e',3,'nopqr'
+'f',1,'qrs'
+'g',1,'rstuv'
+'h',1,'uvw'
