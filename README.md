@@ -1,0 +1,2 @@
+# mines
+Analyze Minesweeper Scenarios
