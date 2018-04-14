@@ -11,7 +11,7 @@ class Qnode:
         self.nnodes = []
 
     def set(self, state):
-        print("setting qnode ", self.name, state)
+        #print("setting qnode ", self.name, state)
         self.state = state
         if self.state == True:
             for n in self.nnodes:
@@ -65,7 +65,7 @@ def step(qname):
     maxval = -1
     for n in nnodes.values():
         if n.possct() == 1:
-            print(n.possibles[0].name)
+            #print(n.possibles[0].name)
             return n
         if n.possct() != 0 and n.possct() < minval:
             minval = n.possct()
@@ -96,8 +96,8 @@ def solve(qname):
                 solutions.add(tuple(sorted(mines)))
                 done = True
             elif n != None:
-                print("found node {0} with numleft = {1:d} and possct = {2:d}" \
-                    .format(n.name, n.numleft(), n.possct()))
+                #print("found node {0} with numleft = {1:d} and possct = {2:d}" \
+                #    .format(n.name, n.numleft(), n.possct()))
                 if n.possct() == 1:
                     qname = n.possibles[0].name
                 else:
@@ -116,7 +116,7 @@ def solve(qname):
 def write_out():
     text = "\n".join([str(sol) for sol in sorted(list(solutions))]) + "\n"
     with open("output.txt",'w') as f:
-        f.write("{0:d} solutions found.\n".format(len(solutions)))
+        f.write("{0:d} solution(s) found.\n".format(len(solutions)))
         f.write(text)
         l = [item for sublist in solutions for item in sublist]
         c = Counter(l)
@@ -146,7 +146,7 @@ nnodes = {}
 reset()
 qname = '1'
 while qname != '0':
-    print("{0:d} solutions found.".format(len(solutions)))
+    print("{0:d} solution(s) found.\n".format(len(solutions)))
     valid = False
     while not valid:
         print("qnodes are: {0}".format(", ".join(list(qnodes.keys()))))
