@@ -1,9 +1,0 @@
-i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y
-a,1,'w x y i j'
-b,1,'i j k m'
-c,1,'m n o p'
-d,1,'o p q r s'
-e,1,'r s t'
-f,1,'s t u v w'
-g,1,'v w x'
-h,1,'m'
