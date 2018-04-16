@@ -153,6 +153,8 @@ def write_out():
         f.write(text)
         l = [item for sublist in solutions for item in sublist]
         c = Counter(l)
+        for q in qnodes.keys():
+            if q not in c: c[q]=0
         f.write("\nNumber of mines in cell summed over all solutions:\n")
         for k in sorted(c.keys()):
             f.write("{0}: {1:d}\n".format(k, c[k]))
