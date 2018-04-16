@@ -1,5 +1,4 @@
 #! /usr/bin/python3
-
 import sys
 from collections import Counter
 
@@ -100,6 +99,8 @@ def solve():
     global solutions
     global seq_queue
     curlist = seq_queue.pop()
+    print("{0:d} in Queue. Current list is: {1:s}" \
+            .format(len(seq_queue), str(curlist)))
     curidx = 0
     done = False
     while not done:
